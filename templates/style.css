@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aliceblue;
+}
+h1{
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 24px;
+ 
+  }
+  form {
+    margin: auto;
+    margin-top: 5%;
+    width: 50%;
+    border: 1px solid none;
+    box-shadow: 1px 1px 5px gray;
+    padding: 2%;
+    background-color: white;
+    border-radius: 15px;
+  }

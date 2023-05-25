@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+         body {
+      background-color: aliceblue;
+    }
+    form {
+      margin: auto;
+      margin-top: 5%;
+      width: 50%;
+      border: 1px solid none;
+      box-shadow: 1px 1px 5px gray;
+      padding: 2%;
+      background-color: white;
+      border-radius: 15px;
+    }
+    h1{
+    font-weight: 600;
+    font-size: 18px;
+ 
+  }
+  </style>
+</head>
+<body>
+  <div class="bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark container-fluid px-5">
+      <a class="navbar-brand" href="#">Loan Classification System</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse justify-content-end" id="navbarsExample01">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/register">Register</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  
+  <div class="container">
+   
+            <form method="POST" action="validate_register">
+              <h1 class="font-weight-bold">Registration form</h1>
+              {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                 
+                      {% for message in messages %}
+                          <p class="alert alert-danger">{{ message }}</p>
+                      {% endfor %}
+                  </ul>
+              {% endif %}
+          {% endwith %}
+              <div class="form-group">
+                <label for="username">Full Name</label>
+                <input type="text" class="form-control" id="username" name="full-name" placeholder="Enter full name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="text" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" class="form-control" name="confirm-password" id="confirm-password" placeholder="Confirm Password">
+              </div>
+              <button type="submit" class="btn btn-dark">Register</button>
+            </form>
+        
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

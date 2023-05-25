@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loan Classification System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <style>
+    body{
+      background-color: aliceblue;
+    }
+    .jumbotron {
+      background-color: #f8f9fa;
+    }
+
+    .jumbotron h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .jumbotron p {
+      font-size: 1.2rem;
+    }
+
+    .jumbotron .btn {
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #fff;
+    }
+
+    footer a {
+      color: #fff;
+    }
+    .header{
+      background-image: url('../static/img/loan.jpg');
+      height: 800px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: white;
+
+    }
+
+    .header div{
+      height: 100%;
+      width: 50%;
+      padding: 2%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .header div a{
+      width: 50%;
+    }
+
+    .property{
+      border: 1px solid none;
+      box-shadow: 1px 1px 5px gray;
+      padding: 2%;
+      background-color: white;
+      border-radius: 15px;
+      width: 99%;
+    }
+    .property p{
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-dark">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark container-fluid px-5">
+      <a class="navbar-brand" href="/">Loan Classification System</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/predict">Classify</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/change_password">Change Password</a>
+          </li>
+          <li>
+            <a class="nav-link" href="/loan_status">View loan status</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="header">
+    
+    <div >
+      <h1 class="display-4">Welcome to our Loan Classification System</h1>
+      <p class="lead">Our system uses machine learning algorithms to accurately classify loan applications.</p>
+      <a class="btn btn-light btn-lg" href="/predict" role="button">Apply for a Loan</a>
+    </div>
+  </div>
+
+  <div class="container-fluid p-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="property">
+        <h2>Easy to use</h2>
+        <p>Our system is designed to be simple and user-friendly, even for those without technical expertise.</p>
+      </div>
+      </div>
+      <div class="col-md-4">
+        <div class="property">
+        <h2>Fast and accurate</h2>
+        <p>Our machine learning algorithms are optimized for speed and accuracy, ensuring quick and reliable loan classification.</p>
+      </div>
+      </div>
+      <div class="col-md-4">
+        <div class="property">
+        <h2>Online Approcah</h2>
+        <p>One platform for many solutions where you can apply for an account online at your convenience anytime and anywhere.</p>
+      </div>
+      </div>
+    </div>
+<br>
+    <br>
+    <h4>Following are the steps you can do to apply for a loan:</h4>
+    <ul>
+      <li>You must be logged in to the system to apply for a loan.</li>
+      <li>You can navigate throgh the classification link in the navbar which redirects you to the classification page.</li>
+      <li>Classification page consists of the form with the input fields that are required to classify your eligibility.</li>
+      <li>Once all the validation is passed the system provides you the information either you are eligible to be granted loan or not.</li>
+    </ul>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-2">
+    <p>&copy; 2023 <a href="#">Loan Classification System</a>. All rights reserved.</p>
+  </footer>
+</body>
+</html>
